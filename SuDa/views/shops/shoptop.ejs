@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="/javascripts/jquery-2.1.4.min.js"></script>
+		<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style>
+			html,
+			body {
+				height: 100%;
+			}
+			
+			.leftbox {
+				height: 100%;
+				border: solid 1px lightblue;
+				margin: 1px;
+				width: auto%;
+				float: left;
+				background-image: url(../images/bg/headbg.png);
+			}
+			
+			.headStyle {
+				height: 2.5em;
+				margin-top: 6px;
+			}
+			
+			@keyframes fade-in {
+				0% {
+					opacity: 0;
+				}
+				/*初始状态 透明度为0*/
+				40% {
+					opacity: 0;
+				}
+				/*过渡状态 透明度为0*/
+				100% {
+					opacity: 1;
+				}
+				/*结束状态 透明度为1*/
+			}
+			
+			@-webkit-keyframes fade-in {
+				/*针对webkit内核*/
+				0% {
+					opacity: 0;
+				}
+				40% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
+			}
+			
+			.clerkbody {
+				animation: fade-in;
+				/*动画名称*/
+				animation-duration: 2.5s;
+				/*动画持续时间*/
+				-webkit-animation: fade-in 1.5s;
+				/*针对webkit内核*/
+			}
+			
+			.move {
+				width: 100%;
+				height: 100%;
+				position: relative;
+				animation: mymove 1s;
+				animation-iteration-count: 1;
+				-moz-animation: mymove 1s;
+				/*Firefox*/
+				-webkit-animation: mymove 1s;
+				/*Safari and Chrome*/
+			}
+			
+			@keyframes mymove {
+				from {
+					left: -500px;
+				}
+				to {
+					left: 0px;
+				}
+			}
+			
+			@-moz-keyframes mymove
+			/*Firefox*/
+			
+			{
+				from {
+					left: -500px;
+				}
+				to {
+					left: 0px;
+				}
+			}
+			
+			@-webkit-keyframes mymove
+			/*Safari and Chrome*/
+			
+			{
+				from {
+					left: -500px;
+				}
+				to {
+					left: 0px;
+				}
+			}
+			
+			.topmove {
+				width: 100%;
+				height: 100%;
+				position: relative;
+				animation: topmove 1s;
+				animation-iteration-count: 1;
+				-moz-animation: topmove 1s;
+				/*Firefox*/
+				-webkit-animation: topmove 1s;
+				/*Safari and Chrome*/
+			}
+			
+			@keyframes topmove {
+				from {
+					top: -300px;
+				}
+				to {
+					top: 0px;
+				}
+			}
+			
+			@-moz-keyframes topmove
+			/*Firefox*/
+			
+			{
+				from {
+					top: -300px;
+				}
+				to {
+					top: 0px;
+				}
+			}
+			
+			@-webkit-keyframes topmove
+			/*Safari and Chrome*/
+			
+			{
+				from {
+					top: -300px;
+				}
+				to {
+					top: 0px;
+				}
+			}
+		</style>
+
+	</head>
+
+	<body>
+		

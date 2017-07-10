@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="../stylesheets/persenal.css" />
+		<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="/javascripts/jquery-2.1.4.min.js"></script>
+		<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		</style>
+		<script>
+			$(function() {
+				$('#myTab li:eq(2) a').tab('show')
+			});
+			$('#carousel-437414').carousel({
+				interval: 2000
+			})
+		</script>
+
+		<style type="text/css">
+			.move {
+				width: 100%;
+				height: 100%;
+				position: relative;
+				animation: mymove 1s;
+				animation-iteration-count: 1;
+				-moz-animation: mymove 1s;
+				/*Firefox*/
+				-webkit-animation: mymove 1s;
+				/*Safari and Chrome*/
+			}
+			
+			@keyframes mymove {
+				from {
+					left: -300px;
+				}
+				to {
+					left: 0px;
+				}
+			}
+			
+			@-moz-keyframes mymove
+			/*Firefox*/
+			
+			{
+				from {
+					left: -300px;
+				}
+				to {
+					left: 0px;
+				}
+			}
+			
+			@-webkit-keyframes mymove
+			/*Safari and Chrome*/
+			
+			{
+				from {
+					left: -300px;
+				}
+				to {
+					left: 0px;
+				}
+			}
+		</style>
+				<style type="text/css">
+			.footmove {
+				width: 100%;
+				height: 100%;
+				position: relative;
+				animation: footmove 1s;
+				animation-iteration-count: 1;
+				-moz-animation: footmove 1s;
+				/*Firefox*/
+				-webkit-animation: footmove 1s;
+				/*Safari and Chrome*/
+			}
+			
+			@keyframes footmove {
+				from {
+					bottom: -300px;
+				}
+				to {
+					bottom: 0px;
+				}
+			}
+			
+			@-moz-keyframes footmove
+			/*Firefox*/
+			
+			{
+				from {
+					bottom: -300px;
+				}
+				to {
+					bottom: 0px;
+				}
+			}
+			
+			@-webkit-keyframes footmove
+			/*Safari and Chrome*/
+			
+			{
+				from {
+					bottom: -300px;
+				}
+				to {
+					bottom: 0px;
+				}
+			}
+		</style>
+	</head>
+
+	<% include head%>
+	<div class="container move">
+		<div class="row clearfix" style="margin-top: 10px;">
+			<div class="col-md-8 column" style="height: 600px;z-index: 100;">
+				<div class="carousel slide" id="carousel-437414">
+					<ol class="carousel-indicators">
+						<li data-slide-to="0" data-target="#carousel-437414">
+						</li>
+						<li data-slide-to="1" data-target="#carousel-437414">
+						</li>
+						<li data-slide-to="2" data-target="#carousel-437414" class="active">
+						</li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="item">
+							<img alt="" src="../images/huandeng/01.jpg" style="width: 800px;height: 400px;" />
+							<div class="carousel-caption">
+								<h4>
+								First Thumbnail label
+							</h4>
+								<p>
+									Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+								</p>
+							</div>
+						</div>
+						<div class="item">
+							<img alt="" src="../images/huandeng/02.jpg" style="width: 800px;height: 400px;" />
+							<div class="carousel-caption">
+								<h4>
+								Second Thumbnail label
+							</h4>
+								<p>
+									Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+								</p>
+							</div>
+						</div>
+						<div class="item active">
+							<img alt="" src="../images/huandeng/03.jpg" style="width: 800px;height: 400px;" />
+							<div class="carousel-caption">
+								<h4>
+								Third Thumbnail label
+							</h4>
+								<p>
+									Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+								</p>
+							</div>
+						</div>
+					</div>
+					<a class="left carousel-control" href="#carousel-437414" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+					<a class="right carousel-control" href="#carousel-437414" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+				</div>
+				<h2>
+				Heading
+			</h2>
+				<p>
+					Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+				</p>
+				<p>
+					<a class="btn" href="#">View details »</a>
+				</p>
+			</div>
+			<div id="login" class="col-md-4 column">
+				<div class="tabbable" id="tabs-675924">
+					<ul id="myTab" class="nav nav-tabs">
+						<li class="active">
+							<a href="#panel-898602" data-toggle="tab">管理员登陆</a>
+						</li>
+						<li>
+							<a href="#panel-765236" data-toggle="tab">店家登陆</a>
+						</li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane active move" id="panel-898602">
+							
+								<% include ./admin/adminLogin %>
+							
+						</div>
+						<div class="tab-pane move" id="panel-765236">
+							
+								<% include ./shops/shopLogin %>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer footmove">
+		<div class="wp">
+			<div class="footer-up">
+				<ul>
+					<li>
+						<a href="#">法律声明</a>
+					</li>
+					<li>
+						<a href="#">关于我们</a>
+					</li>
+					<li>
+						<a href="#">联系我们</a>
+					</li>
+					<li>
+						<a href="#">意见反馈</a>
+					</li>
+					<li>
+						<a href="#">合作企业</a>
+					</li>
+					<li>
+						<a href="#">新闻中心</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer-bottom">
+				<strong>400-1234-000</strong>
+				<p>services@youngfunding.co.uk</p>
+				<p><span>英国总部：</span>Digital Enterprise Centre,6Mitre Passage,O2 Arema,Greewich,London</p>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	</body>
+
+</html>

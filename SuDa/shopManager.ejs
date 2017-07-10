@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main.css?v=1.0"/>
+    <script type="text/javascript"
+            src="http://webapi.amap.com/maps?v=1.3&key=ebb3310e602e7027987911af5e30be56"></script>
+<style>
+	#myform input{
+		margin-top:6px;
+	}
+	#myform textarea{
+		margin-top:6px;
+	}
+	#myform label{
+		margin-top:6px;
+	}
+	#myform select{
+		margin-top:6px;
+	}
+</style>
+<script>
+function onSubPub(){
+	if(pubform.shopname.value==''){
+		alert('营业点名称不允许空');
+		pubform.shopname.focus();
+		return false;
+	}
+	if(pubform.shopintr.value==''){
+		alert('营业点简介不允许空');
+		pubform.shopintr.focus();
+		return false;
+	}
+	if(pubform.shoptype.value==0){
+		alert('请选择营业类别');
+		pubform.shoptype.focus();
+		return false;
+	}
+
+	return true;
+}
+</script>
+<input type='button' value='创建新商家' />
+<div class="form-group" id='myform'>
+    <input type="text" class="form-control" name="shopname" placeholder="请输入营业点名称">
+
+    <textarea class="form-control" rows="5" placeholder="请输入营业简介" name='shopintr'></textarea>
+    <input type="text" class="form-control" name='keywords' placeholder="请输入查询关键词">
+    <select class="form-control" name='shoptype'>
+      <option value='0'>请选择经营类别</option>
+      
+    </select>
+    <label for="lastname" class="col-sm-2 control-label">店铺图片</label>
+    <input type="file" id="inputfile" name='photourl'>
+    经度:<input type='text' name='lng' readonly>&nbsp;
+    维度:<input type='text' name='lat' readonly>&nbsp;
+    <input type="submit" class="btn btn-primary" onclick='dian();' value='确定地理位置'>
+    <br/>
+    <input type="submit" class="btn btn-primary" onclick='dian();' value='提交'>
+</input>
+</div>
+
+
+				
